@@ -23,7 +23,7 @@ client.on('message', (channel, tags, message, self) => {
     "content": null,
     "embeds": [
       {
-        "description": `${tags['display-name']}: ${message}`,
+        "description": `\`${tags['display-name']}: ${message}\``,
         "color": 8411391,
         "author": {
           "name": `${channel.substring(1)}'s Channel`,
