@@ -4,11 +4,12 @@ const tmi = require('tmi.js');
 const client = new tmi.Client({
   channels: config.channels
 });
-client.connect();
-for(let user of config.users) {
-  console.log(user);
+
+if(!config.custom) {
+  config.custom = [];
 }
 
+client.connect();
 client.on('message', (channel, tags, message, self) => {
   let isMatch = false;
   for(let regex of config.custom) {
