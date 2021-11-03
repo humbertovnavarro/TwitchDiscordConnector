@@ -11,7 +11,7 @@ client.on('message', (channel, tags, message, self) => {
     if(user === tags['display-name'].toLowerCase()) {
       isMatch = true;
     }
-    if(message.toLowerCase().indexOf(user)) {
+    if(message.toLowerCase().indexOf(user) !== -1) {
       isMatch = true;
     }
   });
