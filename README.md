@@ -3,7 +3,7 @@ A very simple app to get chat messages of users in your discord server.
 
 Requires node and npm.
 
-install packages with npm install and run with npm run start
+install packages with npm install and run with npm run start, and copy config.example.json to config.json
 
 ![image](https://user-images.githubusercontent.com/16251746/140000183-933b3304-26e7-448e-81f1-f4042803ad2f.png)
 
@@ -31,8 +31,3 @@ Channels are the channels that the application will monitor for messages, users 
 
 You can use regex by adding a "custom" key that is an array of regular expressions.
 A catch all regex is shown above.
-
-Install packages with npm install
-Rename config.example.json to config.json
-Edit config.json to suit your needs
-run with  npm run start
