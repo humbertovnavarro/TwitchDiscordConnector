@@ -1,0 +1,9 @@
+{
+  "webhook": "https://discord.com/api/webhooks/mywebhook",
+  "channels": [
+    "run18"
+  ],
+  "users": [
+    "kamaiiohmae"
+  ]
+}
