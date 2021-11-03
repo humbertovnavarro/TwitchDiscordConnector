@@ -6,7 +6,7 @@ const client = new tmi.Client({
 });
 
 config.users = config.users.map( user => user.toLowerCase());
-
+config.blacklist = config.blacklist.map( user => user.toLowerCase());
 if(!config.custom) {
   config.custom = [];
 }
