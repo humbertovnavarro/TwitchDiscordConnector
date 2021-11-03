@@ -1,4 +1,3 @@
-require('dotenv').config();
 const config = require('./config');
 const axios = require('axios');
 const tmi = require('tmi.js');
