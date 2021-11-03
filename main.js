@@ -5,16 +5,29 @@ const client = new tmi.Client({
   channels: config.channels
 });
 client.connect();
+for(let user of config.users) {
+  console.log(user);
+}
+
 client.on('message', (channel, tags, message, self) => {
   let isMatch = false;
-  config.users.forEach(user => {
-    if(user === tags['display-name'].toLowerCase()) {
+  for(let regex of config.custom) {
+    if (message.test(regex)) {
       isMatch = true;
+      break;
     }
-    if(message.toLowerCase().indexOf(user) !== -1) {
+  }
+  if(!isMatch)
+  for(let user of config.users) {
+    if (user === tags['display-name'].toLowerCase()) {
       isMatch = true;
+      break;
     }
-  });
+    if (message.toLowerCase().indexOf(user) !== -1) {
+      isMatch = true;
+      break;
+    }
+  }
   if (!isMatch) {
     return;
   }
